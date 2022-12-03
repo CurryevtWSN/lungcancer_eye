@@ -36,10 +36,10 @@ map = {'Squamous cell carcinoma':1,'Adenocarcinoma':2,'Large cell carcinoma':3,'
 Histopathological_type =map[Histopathological_type]
 
 #%%load model
-xgb_model = joblib.load(r'E:\Spyder_2022.3.29\output\machinel\wsn_output\xgb_model_lung_cancer_eye.pkl')
+xgb_model = joblib.load('xgb_model_lung_cancer_eye.pkl')
 XGB_model = xgb_model
 #%%load data
-hp_train = pd.read_csv('E:\\Spyder_2022.3.29\\output\\machinel\\sy_output\\lung_cancer_em\\lung_cancer_githubdata.csv')
+hp_train = pd.read_csv('lung_cancer_githubdata.csv')
 hp_train['M'] = hp_train['M'].apply(lambda x : +1 if x==1 else 0)
 features =["Histopathological_type","AFP","CEA","CA_125","CA_199","CA_153",'CYFRA21_1','TPSA']
 target = 'M'
