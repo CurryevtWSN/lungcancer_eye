@@ -12,7 +12,7 @@ import joblib
 #%%不提示warning信息
 st.set_option('deprecation.showPyplotGlobalUse', False)
 #%%set title
-st.set_page_config(page_title='Prediction model for Ocular metastasis of lung cancer')
+st.set_page_config(page_title='Eye metastasis of primary lung cancer: development and verification of predictive model based extreme gradient boost')
 st.title('Eye metastasis of primary lung cancer: development and verification of predictive model based extreme gradient boost')
 st.sidebar.markdown('## Variables')
 Histopathological_type = st.sidebar.selectbox('Histopathological_type',('Squamous cell carcinoma','Adenocarcinoma','Large cell carcinoma',
